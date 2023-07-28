@@ -4,6 +4,7 @@ import Auth from "./pages/Authorization/Auth";
 import Login from "./pages/Authorization/Login";
 import Header from "./components/Header/Header";
 import "./App.css";
+import BuldingObject from "./components/BuldingObject/BuldingObject";
 
 function App() {
   return (
@@ -11,13 +12,14 @@ function App() {
     <>
       <div className="container">
         <Header />
-        <Estate/>
+        {/* <Estate/> */}
       </div>
-      <Routes>
+      <BuldingObject/>
+      {/* <Routes>
         <Route path="/auth" element={<Auth />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Estate />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 

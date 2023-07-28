@@ -14,7 +14,7 @@ function Estate() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchEstates());
-  }, [dispatch]);
+  }, []);
 
 
 

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+.mainContainer{
+    font-family: 'Fira Sans', sans-serif;
+    color: #2a2a2a;
+}
+.slogan{
+    width: 50%;
+    height: 500px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    flex-direction: column;
+}
+.costyle{
+    width: 33%;
+    height: 400px;
+}
+.firstBlock{
+    display: flex;
+    justify-content: center;
+}
+.textFirstBlock{
+    width: 75%;
+}
+.logoText{
+    font-size: 34px;
+}
+.imgInImageMain{
+    position: absolute;
+    right: 290px;
+    width: 37%;
+    height: 540px;
+}
+.secondBlock{
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    background-color: #2a2a2a;
+}
