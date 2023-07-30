@@ -22,11 +22,13 @@
 }
 .header_right {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 
-  span {
+  .counter {
     position: absolute;
-    left: 20%;
+    left: 15%;
     padding: 2px;
     color: white;
     text-align: center;
@@ -34,6 +36,7 @@
     border-radius: 50%;
     width: 20px;
   }
+  
   svg:hover {
     fill:rgb(252, 206, 150);
   }
