@@ -22,7 +22,7 @@ const Header = () => {
       <div className={styles.logo}>
         <img src={logo} alt="" />
       </div>
-      <nav style={{width:'30%'}} >
+      <nav style={{width:'35%'}} >
         <div className={styles.menuNavigation}>
           <div className={styles.navigation}>
             <a href="#about">О нашей компании</a>
