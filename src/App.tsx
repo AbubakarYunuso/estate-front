@@ -6,6 +6,7 @@ import Login from "./pages/Authorization/Login";
 import Header from "./components/Header/Header";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
+import Comparison from "./components/Comparison/Comparison";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Estate />} />
         <Route path="/cards" element={<Cards/>} />
+        <Route path="/comparison" element={<Comparison/>}/>
       </Routes>
     </>
   );

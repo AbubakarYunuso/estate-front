@@ -96,3 +96,10 @@ gap: 20px;
   }
 }
 
+.comparison {
+  fill:grey;/* Изначальный цвет иконки */
+  &:hover {
+    fill:rgb(252, 206, 150);
+    transition: fill 0.3s;
+  }
+}

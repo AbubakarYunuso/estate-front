@@ -29,12 +29,23 @@
   .counter {
     position: absolute;
     left: 15%;
-    padding: 2px;
     color: white;
     text-align: center;
     background-color: rgb(252, 206, 150);
     border-radius: 50%;
-    width: 20px;
+    width: 18px;
+  }
+
+  .counter2 {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    color: white;
+    text-align: center;
+    background-color: rgb(252, 206, 150);
+    border-radius: 50%;
+    width: 18px;
+    margin-right: 50px;
   }
   
   svg:hover {
@@ -44,3 +55,4 @@
 .menu {
   position: relative;
 }
+

@@ -26,7 +26,8 @@ interface User {
   email?: string;
   password?: string;
   estate?:[],
-  favorites?:[] ;
+  favorites?:[] ,
+  comparison?:[]
 }
 
 interface UserState {
@@ -127,6 +128,32 @@ export const addFavorite = createAsyncThunk(
     }
   }
 );
+export const addComparison = createAsyncThunk(
+  "estate/addComparison",
+  async (estateId, thunkAPI) => {
+    const userId = thunkAPI.getState().auth.userId
+
+    try {
+      const res = await fetch(`http://localhost:4000/addComparison/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ comparison: estateId }),
+      });
+      const comparison = await res.json();
+
+      if (comparison.error) {
+        return thunkAPI.rejectWithValue(comparison.error);
+      }
+      
+      return comparison;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 // export const removeFavorite = createAsyncThunk(
 //   "estate/removeFavorite",
 //   async(estateId,thunkAPI ) => {
@@ -169,13 +196,13 @@ const authSlice = createSlice({
           state.error = null;
         })
         .addCase(getOneUser.fulfilled, (state, action ) => {
-          state.user = {
-            ...state.user,
-            favorites: action.payload.favorites, // предполагая, что поле favorites есть в action.payload
-          };
+          state.user = action.payload;
         })
         .addCase(addFavorite.fulfilled, (state, action) => {
           state.user.favorites = action.payload;
+        })
+        .addCase(addComparison.fulfilled, (state, action) => {
+          state.user.comparison = action.payload;
         })
        
     },
