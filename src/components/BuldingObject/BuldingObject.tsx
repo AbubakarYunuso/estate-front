@@ -8,7 +8,7 @@ import houseIcon from "../../acces/icons/bi_building.png";
 import moneyIcon from "../../acces/icons/money.png";
 import pasIcon from "../../acces/icons/ras.png";
 import { Placemark, Map, YMaps } from "@pbe/react-yandex-maps";
-import tgIcon from '../../acces/icons/tgIconNeed.png'
+import tgIcon from "../../acces/icons/tgIconNeed.png";
 
 function BuldingObject(): JSX.Element {
   const dispatch = useDispatch<AppDispatch>();
@@ -25,8 +25,8 @@ function BuldingObject(): JSX.Element {
     <div className={styles.mainContainer}>
       <div className={styles.firstBlock}>
         <div className={styles.slogan}>
-          <div style={{ width: "50%" }}>
-            <div className={styles.textFirstBlock}>Квартиры для России</div>
+          <div style={{ width: "53%" }}>
+            <div className={styles.textFirstBlock}>Квартиры по всей России</div>
             <div className={styles.logoText}>от ООО ESTATE-PRO</div>
           </div>
         </div>
@@ -56,6 +56,7 @@ function BuldingObject(): JSX.Element {
           <div className={styles.iconContainer}>
             <div className={styles.icon}>
               <img src={pasIcon} alt="" />
+              <article style={{transition: '.3s'}} id="about" ></article>
             </div>
             <div className={styles.textIcon}>
               Рассрочка от партнёров до 5 лет с минимальной наценкой
@@ -90,6 +91,7 @@ function BuldingObject(): JSX.Element {
           </div>
         </div>
       </div>
+      <article id="buldingObject" ></article>
       <div className={styles.buldingObjectText}>НАШИ ЖИЛЫЕ КОМПЛЕКСЫ →</div>
       <div className={styles.fourBlock}>
         <div className={styles.buldingObjectCarts}>
@@ -109,6 +111,7 @@ function BuldingObject(): JSX.Element {
         </div>
       </div>
       <div className={styles.fiveBlock}>
+      <article id="map" ></article>
         <div className={styles.map}>
           <YMaps>
             <Map
@@ -127,9 +130,17 @@ function BuldingObject(): JSX.Element {
           <div className={styles.aboutUsContainer}>
             <div className={styles.headerAboutUs}>Связаться с нами:</div>
             <div className={styles.number}>+7(928) 017-04-12</div>
-            <div className={styles.mainOfice} >Отдел продаж :</div>
-            <div className={styles.street}>Чеченская республика, г.Грозный, ул.Льва Ящина,22</div>
-            <div className={styles.tg}> <a target='_blank' href='https://t.me/Abubakar_Yunusov'> <img className={styles.tgIcon}  src={tgIcon} alt="" /> </a> </div>
+            <div className={styles.mainOfice}>Отдел продаж :</div>
+            <div className={styles.street}>
+              Чеченская республика, г.Грозный, ул.Льва Ящина,22
+            </div>
+            <div className={styles.tg}>
+              {" "}
+              <a target="_blank" href="https://t.me/Abubakar_Yunusov">
+                {" "}
+                <img className={styles.tgIcon} src={tgIcon} alt="" />{" "}
+              </a>{" "}
+            </div>
           </div>
         </div>
       </div>
