@@ -4,6 +4,7 @@ const initialState = {
   estates: [],
   loading: false,
   error: null,
+ 
 };
 
 export const fetchEstates = createAsyncThunk(
@@ -15,14 +16,15 @@ export const fetchEstates = createAsyncThunk(
       if (estates.error) {
         return thunkAPI.rejectWithValue(estates.error);
       }
-    
-
+      
+      
       return estates;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
   }
 );
+
 
 const estatesSlice = createSlice({
   name: "estates",
@@ -42,7 +44,9 @@ const estatesSlice = createSlice({
         state.loading = false;
         state.error = null;
         state.estates = action.payload;
-      });
+      })
+     
+   
   },
 });
 

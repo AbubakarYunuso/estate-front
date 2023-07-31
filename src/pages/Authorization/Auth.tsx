@@ -4,6 +4,8 @@ import * as React from "react";
 import { AppDispatch, RootState } from "../../app/store";
 import { authSignUp } from "../../features/authSlice";
 import { useNavigate } from "react-router";
+import Estate from "../../components/Estates/Estate";
+import { Link } from "react-router-dom";
 function Auth() {
   const dispatch: AppDispatch = useDispatch();
   const [fullName, setFullName] = React.useState<string>("");
@@ -32,8 +34,7 @@ function Auth() {
     setFullName("");
   };
   const token = useSelector((state: RootState) => state.auth.token);
-  console.log(token);
-  
+
   React.useEffect(() => {
     if (token) {
       navigate("/");
@@ -41,32 +42,43 @@ function Auth() {
   }, [navigate, token]);
 
   return (
-    <div className={styles.auth}>
-      /
-      <div className={styles.container}>
-        <div className={styles.auth_item}>
-          <h2 style={{ color: "#fff" }}>Sing up</h2>
-          <form className={styles.auth_from} onSubmit={(e) => handleSignUp(e)}>
-            <div className={styles.auth_input + " " + styles.input_name}>
-              <p>Name</p>
-              <input value={fullName} onChange={handleFullName} type="Name" placeholder="Enter your Name" />
-            </div>
-            <div className={styles.auth_input + " " + styles.input_email}>
-              <span>Email</span>
-              <input value={email} onChange={handleSetAuth} type="email" placeholder="Enter your email address" />
-            </div>
-            <div className={styles.auth_input + " " + styles.input_password}>
-              <span>Password</span>
-              <input value={password} onChange={handleSetPassword} type="password" placeholder="Enter your password" />
-            </div>
-            <button className={styles.btn_auth}>Sing up</button>
-            
-          </form>
-          {authError && <div className={styles.auth_error}>{authError}</div>}
-        </div>
-
-        
-      </div>
+    <div className={styles.auth_block}>
+    <Estate/>
+   <div className={styles.auth}>
+     <div className={styles.container}>
+       <div className={styles.auth_item}>
+       <div className={styles.block_link_auth}>
+           <Link className={styles.link_login} to="/login">АВТОРИЗАЦИЯ</Link>
+           <Link className={styles.link_auth} to="/auth">РЕГИСТРАЦИЯ</Link>
+          </div>
+       <button onClick={() => navigate("/")} className={styles.btn_close}>&#10006;</button>
+         <h2>Войдите в личный кабинет, или зарегистрируйтесь</h2>
+         <form
+           className={styles.auth_from}
+           onSubmit={(e) => handleSignUp(e)}
+         >
+           <div className={styles.auth_input + " " + styles.input_name}>
+             <span>Имя</span>
+             <input value={fullName} onChange={handleFullName} type="Name" />
+           </div>
+           <div className={styles.auth_input + " " + styles.input_email}>
+             <span>E-mail</span>
+             <input value={email} onChange={handleSetAuth} type="email" />
+           </div>
+           <div className={styles.auth_input + " " + styles.input_password}>
+             <span>Пароль</span>
+             <input
+               value={password}
+               onChange={handleSetPassword}
+               type="password"
+             />
+           </div>
+           <button className={styles.btn_auth}>РЕГИСТРАЦИЯ</button>
+         </form>
+         {authError && <div className={styles.auth_error}>{authError}</div>}
+       </div>
+     </div>  
+     </div>
     </div>
   );
 }
