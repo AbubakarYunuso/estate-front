@@ -29,7 +29,7 @@ console.log(comparisonLength);
         <li>О нашей компании</li>
         <li>Наши ЖК</li>
         <li>Местоположение ЖК</li>
-        <li>Условия рассрочки</li>
+        <Link to="/comments"><li>Отзывы</li></Link>
       </ul>
       <div className={styles.header_right}>
       
