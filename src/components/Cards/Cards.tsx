@@ -22,6 +22,8 @@ const Cards = () => {
       }
 
     console.log(user);
+    console.log(estates);
+    
     const favoriteEstates = estates.filter((estate) => user.includes(estate._id));
 
     return (
