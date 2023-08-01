@@ -1,18 +1,36 @@
+import { Routes, Route } from "react-router-dom";
+import Estate from "./components/Estates/Estate";
+import Auth from "./pages/Authorization/Auth";
+import Login from "./pages/Authorization/Login";
+import Header from "./components/Header/Header";
+import Comments from "./pages/Comments/Comments";
+import "./App.css";
+import Cards from "./components/Cards/Cards";
+import Comparison from "./components/Comparison/Comparison";
 
-import Estate from "./components/Estates/Estate"
 import Footer from "./components/Footer/Footer"
-import Header from "./components/Header/Header"
+import BuldingObject from "./components/BuldingObject/BuldingObject";
 
 
 function App() {
-
   return (
     <>
-      <Header/>
-      <Estate/>
-      <Footer/>
+
+
+      <div className="container">
+        <Header />
+          <Footer/>
+      </div>
+      <Routes>
+        <Route path="/comments" element={<Comments />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/cards" element={<Cards />} />
+        <Route path="/" element={<BuldingObject />} />
+        <Route path="/comparison" element={<Comparison />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  height: 100px;
+  img {
+    width: 50%;
+  }
+  ul {
+    display: flex;
+    width:100%;
+    list-style-type: none;
+    justify-content: space-between;
+  }
+}
+.phone {
+  svg {
+     width: 60%;
+    &:hover {
+      transform: scale(1.3);
+      transition: 0.2s;
+    }
+    cursor: pointer;
+
+  }
+}
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .counter {
+    position: absolute;
+    left: 15%;
+    color: white;
+    text-align: center;
+    background-color: rgb(252, 206, 150);
+    border-radius: 50%;
+    width: 18px;
+  }
+
+  .counter2 {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    color: white;
+    text-align: center;
+    background-color: rgb(252, 206, 150);
+    border-radius: 50%;
+    width: 18px;
+    margin-right: 50px;
+  }
+  
+  svg:hover {
+    fill:rgb(252, 206, 150);
+  }
+}
+.menu {
+  position: relative;
+}
+
+
+/////////////////////////////////////
+.myInfo {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  border: solid 1px #7e7676;
+  border-radius: 20px 0;
+  width: 200px;
+  padding: 10px 10px 40px 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 14px 8px rgba(0, 0, 0, 0),
+    0 10px 10px rgba(0, 0, 0, 0.584);
+  z-index: 10;
+  top: 50px;
+  color: #7e7676;
+  left: -160px;
+  .openUser_close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover {
+      color: #bf9b70;
+    }
+  }
+  p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      color: #7e7676;
+      transition: 0.3s;
+
+      &:hover {
+        color: #000000;
+        border-bottom: solid 1px black;
+      }
+    }
+    span {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+  .iconExtit{
+    position: absolute;
+    left: 8px;
+    width: 18px;
+    height: 18px;
+
+  }
+  button {
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 15px;
+    margin-left: 17px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      transition: 0.3s;
+      color: #bf9b70;
+    }
+  }
+}
+.navigation{
+  font-size: 12px;
+  font-weight: 600;
+}
+.navigation a{
+  text-decoration: none;
+  color: black;
+}
+.menuNavigation{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.logo{
+  width: 15%;
+}
+
