@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './footer.module.scss'
-
+import favicon from "../../acces/icons/favicon.ico";
 export default function Footer() {
   return (
     <div className={styles.footer}>
         <div className={styles.foterLeft}>
-            <img src="https://ru-ru.learn.canva.com/wp-content/uploads/sites/19/2020/07/paul-skorupskas-7KLa-xLbSXA-unsplash-2.jpg" alt="logo" className={styles.logo}/>
-            <p>Все права защещины</p>
+            <img src={favicon} className={styles.logo}/>
+            <p> &copy; Все права защещины</p>
         </div>
         <div className={styles.foterRight}>
             <div className={styles.itemLeft}>
-                <h2>OOO</h2>
-                <p>OOO</p>
+                <h2>OOO &laquo;Estate-Pro&raquo;</h2>
+                <p>OOO &laquo;Estate-Pro&raquo;</p>
                 <p>ИНН 2003744675</p>
                 <p>КПП 2458596352</p>
                 <p>Директор Тсуцаев Джамлейл</p>
