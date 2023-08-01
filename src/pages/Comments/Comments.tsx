@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-
 import {
   deleteComments,
   fetchComments,
@@ -11,13 +9,8 @@ import Style from "./comments.module.css";
 
 function Comments() {
   const comments = useSelector((state) => state.comments.comments);
-  console.log(comments, "DSDSDS");
-
-
-
   const dispatch = useDispatch();
   const [text, setText] = useState("");
-
   const handleChangeText = (e) => {
     setText(e.target.value);
   };
@@ -38,12 +31,12 @@ function Comments() {
     <div className={Style.allPage}>
         <h2 className={Style.Intro}>Отзывы от наших клиентов</h2>
     <div className={Style.mainCommentPage}>
- 
         <div className={Style.scrollComment}>
         {comments.map((item) => {
             
           return (<div className={Style.nameAndComment}>
-            <p className={Style.fullName}>{item.user.fullName}:</p>
+            <p className={Style.fullName}>{item.user.fullname}:</p>
+
             <div className={Style.comment_mini_block} key={item._id}>
               <p>{item.text}</p>
               <button className={Style.deleteButton}onClick={() => handleDeleteComment(item._id)}>x</button>
@@ -53,7 +46,6 @@ function Comments() {
           );
         })}
         </div>
-         
     </div>
      <form className={Style.formComments}onSubmit={handleSubmit}>
         <div className={Style.inputBlock}>
@@ -62,9 +54,7 @@ function Comments() {
        value={text}
        onChange={handleChangeText}
        type="text"
-       
      />
-      
      <button className={Style.sendButton}>Отправить</button>
      </div>
    </form>
