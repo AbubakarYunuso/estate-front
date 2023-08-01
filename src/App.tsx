@@ -23,7 +23,6 @@ function App() {
         <Route path="/comments" element={<Comments />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Estate />} />
         <Route path="/cards" element={<Cards />} />
         <Route path="/" element={<BuldingObject />} />
         <Route path="/comparison" element={<Comparison />} />
