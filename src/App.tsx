@@ -19,7 +19,8 @@ function App() {
 
       <div className="container">
         <Header />
-          <Footer/>
+
+          
       </div>
       <Routes>
         <Route path="/comments" element={<Comments />} />
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<BuldingObject />} />
         <Route path="/comparison" element={<Comparison />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
