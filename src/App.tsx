@@ -7,12 +7,15 @@ import Comments from "./pages/Comments/Comments";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
 import Comparison from "./components/Comparison/Comparison";
-
+import Footer from "./components/Footer/Footer"
 import BuldingObject from "./components/BuldingObject/BuldingObject";
+
 
 function App() {
   return (
     <>
+
+
       <div className="container">
         <Header />
       </div>
