@@ -18,6 +18,11 @@ function App() {
 
       <div className="container">
         <Header />
+<<<<<<< HEAD
+=======
+
+          
+>>>>>>> main
       </div>
       <Routes>
         <Route path="/comments" element={<Comments />} />
@@ -28,6 +33,7 @@ function App() {
         <Route path="/comparison" element={<Comparison />} />
         <Route path="/estate" element={<Estate />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
