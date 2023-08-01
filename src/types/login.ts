@@ -8,6 +8,7 @@ export type userDataType = {
   
   export type LoginResponse = {
     token: string;
-    err: string | null;
+    error: string | null;
+    user: userDataType;
   
   };

@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Estate from "./components/Estates/Estate";
 import Auth from "./pages/Authorization/Auth";
@@ -13,27 +12,24 @@ import BuldingObject from "./components/BuldingObject/BuldingObject";
 
 function App() {
   return (
-
-
     <>
       <div className="container">
         <Header />
-
-        <Estate/>
-
+        <Routes>
+          <Route path="/" element={<Estate />} />
+        </Routes>
       </div>
       <Routes>
-        <Route path="/comments" element={<Comments/>}/>
+        <Route path="/comments" element={<Comments />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<BuldingObject />}/>
-        <Route path="/cards" element={<Cards/>} />
-        <Route path="/comments" element={<Comments/>}/>
-        <Route path="/comparison" element={<Comparison/>}/>
+        <Route path="/" element={<Estate />} />
+        <Route path="/cards" element={<Cards />} />
+        <Route path="/" element={<BuldingObject />} />
+        <Route path="/comparison" element={<Comparison />} />
       </Routes>
     </>
   );
-
 }
 
 export default App;
