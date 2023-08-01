@@ -10,7 +10,6 @@ import pasIcon from "../../acces/icons/ras.png";
 import { Placemark, Map, YMaps } from "@pbe/react-yandex-maps";
 import tgIcon from "../../acces/icons/tgIconNeed.png";
 import { useNavigate } from "react-router-dom";
-import Footer from "../Footer/Footer";
 
 function BuldingObject(): JSX.Element {
   const dispatch = useDispatch<AppDispatch>();
@@ -150,7 +149,6 @@ function BuldingObject(): JSX.Element {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

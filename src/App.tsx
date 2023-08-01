@@ -14,15 +14,8 @@ import BuldingObject from "./components/BuldingObject/BuldingObject";
 function App() {
   return (
     <>
-
-
       <div className="container">
         <Header />
-<<<<<<< HEAD
-=======
-
-          
->>>>>>> main
       </div>
       <Routes>
         <Route path="/comments" element={<Comments />} />
