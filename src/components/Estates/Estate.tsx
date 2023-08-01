@@ -15,7 +15,7 @@ function Estate() {
 
   useEffect(() => {
     dispatch(fetchEstates());
-  }, [dispatch]);
+  }, []);
 
 
   const handleFavoriteToggle = (estateId) => {

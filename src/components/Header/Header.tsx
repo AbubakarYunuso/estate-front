@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
-import styles from './header.module.scss'
-import favicon from '../../acces/icons/favicon.ico'
-import account from '../../acces/icons/account.svg'
-import favorite from '../../acces/icons/favorite.svg'
-import { useDispatch, useSelector } from 'react-redux'
-import { getOneUser } from '../../features/authSlice'
-import { Link } from 'react-router-dom'
+import { useEffect } from "react";
+import styles from "./header.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { getOneUser } from "../../features/authSlice";
+import { Link } from "react-router-dom";
+import logo from '../../acces/icons/Снимок_экрана_2023-07-31_173422-transformed.png'
+import { AppDispatch, RootState } from "../../app/store";
+
 const Header = () => {
   const user = useSelector((state) => state.auth.user.favorites);
   const comparison = useSelector((state) => state.auth.user.comparison);
@@ -19,8 +19,6 @@ const Header = () => {
   // Проверяем, что user не равен undefined, и устанавливаем значение по умолчанию 0
   const userLength = user ? user.length : 0;
 const comparisonLength = comparison ? comparison.length : 0;
-
-console.log(comparisonLength);
 
   return (
     <div className={styles.header}>
