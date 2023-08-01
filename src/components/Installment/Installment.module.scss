@@ -1,0 +1,176 @@
+.mainContainer {
+  font-family: "Fira Sans", sans-serif;
+  color: #2a2a2a;
+}
+.slogan {
+  width: 70%;
+  height: 350px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  flex-direction: column;
+  font-weight: 600;
+}
+.costyle {
+  width: 65%;
+  height: 380px;
+}
+.firstBlock {
+  display: flex;
+  justify-content: center;
+}
+.textFirstBlock {
+  width: 70%;
+  text-align: right;
+}
+.logoText {
+  font-size: 32px;
+  text-align: center;
+}
+.imgInImageMain {
+  position: absolute;
+  right: 12%;
+  width: 43%;
+  height: 430px;
+  top: 132px;
+}
+.secondBlock {
+  height: 500px;
+  width: 100%;
+  margin: auto;
+  background-color: #2a2a2a;
+  margin-bottom: 90px;
+}
+.iconsContainer {
+  display: flex;
+  width: 65%;
+  margin: auto;
+  justify-content: space-between;
+}
+.iconContainer {
+  display: flex;
+  margin-top: 210px;
+  flex-direction: column;
+  width: 30%;
+}
+.icon {
+  width: 16%;
+  margin: auto;
+}
+.icon > img {
+  width: 100%;
+  height: 100%;
+}
+.textIcon {
+  color: #fff;
+  width: 70%;
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+  margin-top: 35px;
+}
+.thirdBlock {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+}
+.procentBlockContainer {
+  width: 65%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.procentBlock {
+  width: 10.5%;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2a2a2a;
+}
+.textRasr {
+  width: 64%;
+  margin: auto;
+  font-size: 27px;
+  font-weight: 600;
+}
+.siz {
+  width: 13%;
+  height: 5px;
+  background-color: #2a2a2a;
+  position: absolute;
+  left: 10%;
+}
+.sizTwo {
+  width: 13%;
+  height: 5px;
+  background-color: #2a2a2a;
+  position: absolute;
+  left: 32%;
+}
+.sizTree {
+  width: 13%;
+  height: 5px;
+  background-color: #2a2a2a;
+  position: absolute;
+  left: 55%;
+}
+.sizFour {
+  width: 13%;
+  height: 5px;
+  background-color: #2a2a2a;
+  position: absolute;
+  left: 77%;
+}
+.fourBlock {
+  width: 70%;
+  margin: auto;
+  height: 200px;
+}
+.nameInput {
+  width: 20%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px #2a2a2a;
+}
+.emailInput {
+  width: 28%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px #2a2a2a;
+}
+.numberInput {
+  width: 18%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px #2a2a2a;
+}
+.buttonInput {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  border-radius: 10px;
+}
+.form{
+  display: flex;
+  justify-content: space-around;
+}
+.textConsult{
+  width: 64%;
+  margin: auto;
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
