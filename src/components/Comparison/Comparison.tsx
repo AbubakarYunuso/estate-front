@@ -11,7 +11,6 @@ const Comparison = () => {
 
     const dispatch = useDispatch();
     const favoriteEstates = estates.filter((estate) => user?.includes(estate._id));
-// console.log('USER', estates);
 
     useEffect(() => {
       dispatch(fetchEstates());
