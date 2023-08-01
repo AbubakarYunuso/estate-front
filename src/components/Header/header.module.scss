@@ -29,18 +29,32 @@
 }
 .header_right {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 
-  span {
+  .counter {
     position: absolute;
-    left: 20%;
-    padding: 2px;
+    left: 15%;
     color: white;
     text-align: center;
     background-color: rgb(252, 206, 150);
     border-radius: 50%;
-    width: 20px;
+    width: 18px;
   }
+
+  .counter2 {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    color: white;
+    text-align: center;
+    background-color: rgb(252, 206, 150);
+    border-radius: 50%;
+    width: 18px;
+    margin-right: 50px;
+  }
+  
   svg:hover {
     fill:rgb(252, 206, 150);
   }
@@ -48,6 +62,7 @@
 .menu {
   position: relative;
 }
+
 .navigation{
   font-size: 12px;
   font-weight: 600;

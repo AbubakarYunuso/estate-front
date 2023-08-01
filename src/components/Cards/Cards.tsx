@@ -12,17 +12,18 @@ const Cards = () => {
     const estates = useSelector((state) => state.estates.estates);
 
     const dispatch = useDispatch();
+
     useEffect(() => {
       dispatch(fetchEstates());
     }, [dispatch]);
   
     const handleFavoriteToggle = (estateId) => {
-
         dispatch(addFavorite(estateId))
-    
       }
 
     console.log(user);
+    console.log(estates);
+    
     const favoriteEstates = estates.filter((estate) => user.includes(estate._id));
 
     return (

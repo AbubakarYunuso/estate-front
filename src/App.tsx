@@ -7,6 +7,8 @@ import Header from "./components/Header/Header";
 import Comments from "./pages/Comments/Comments";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
+import Comparison from "./components/Comparison/Comparison";
+
 import BuldingObject from "./components/BuldingObject/BuldingObject";
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<BuldingObject />}/>
         <Route path="/cards" element={<Cards/>} />
+        <Route path="/comments" element={<Comments/>}/>
+        <Route path="/comparison" element={<Comparison/>}/>
       </Routes>
     </>
   );
