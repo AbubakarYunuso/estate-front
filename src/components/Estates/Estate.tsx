@@ -10,7 +10,7 @@ function Estate() {
   const estates = useSelector((state) => state.estates.estates);
   const user = useSelector((state) => state.auth.user.favorites);
   const comparison = useSelector((state) => state.auth.user.comparison);
-  
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -73,12 +73,9 @@ function Estate() {
              </div>
              <div className={styles.button}>Узнать цену</div>
               </div>
-
-
             )
           })
         }
-
       </div>
     </>
   );

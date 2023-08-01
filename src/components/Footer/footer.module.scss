@@ -1,0 +1,26 @@
+.footer{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    h2{
+        margin: 0;
+    }
+    p{
+        margin: 6px;
+    }
+    .logo{
+        margin-bottom: 50px;
+        width: 30px; 
+    }
+    .foterLeft{
+        text-align: center;
+    }
+    color: #ffffff;
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    .foterRight{
+        display: flex;
+        justify-content: space-between;
+    }
+}
