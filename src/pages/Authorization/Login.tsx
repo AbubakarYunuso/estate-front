@@ -5,7 +5,6 @@ import * as React from "react";
 import { fetchLogin } from "../../features/loginSlice";
 import { userDataType } from "../../types/login";
 import { useNavigate } from "react-router";
-import Estate from "../../components/Estates/Estate";
 import { Link } from "react-router-dom";
 function Login() {
   const dispatch: AppDispatch = useDispatch();
@@ -34,7 +33,6 @@ function Login() {
 
   return (
     <div className={styles.auth_block}>
-      <Estate/>
       <div className={styles.auth}>
         <div className={styles.auth_block}>
           <div className={styles.container}>

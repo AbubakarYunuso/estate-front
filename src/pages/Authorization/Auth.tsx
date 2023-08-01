@@ -4,7 +4,6 @@ import * as React from "react";
 import { AppDispatch, RootState } from "../../app/store";
 import { authSignUp } from "../../features/authSlice";
 import { useNavigate } from "react-router";
-import Estate from "../../components/Estates/Estate";
 import { Link } from "react-router-dom";
 function Auth() {
   const dispatch: AppDispatch = useDispatch();
@@ -43,7 +42,6 @@ function Auth() {
 
   return (
     <div className={styles.auth_block}>
-    <Estate/>
    <div className={styles.auth}>
      <div className={styles.container}>
        <div className={styles.auth_item}>
