@@ -19,7 +19,7 @@ function App() {
       <div className="container">
         <Header />
 
-        
+        <Estate/>
 
       </div>
       <Routes>

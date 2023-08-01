@@ -5,7 +5,7 @@ import { getOneUser } from "../../features/authSlice";
 import { Link } from "react-router-dom";
 import logo from '../../acces/icons/Снимок_экрана_2023-07-31_173422-transformed.png'
 import { AppDispatch, RootState } from "../../app/store";
-
+import favicon from '../../acces/icons/favicon.ico'
 const Header = () => {
   const user = useSelector((state) => state.auth.user.favorites);
   const comparison = useSelector((state) => state.auth.user.comparison);
