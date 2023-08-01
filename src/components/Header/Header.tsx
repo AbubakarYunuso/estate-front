@@ -38,9 +38,9 @@ const comparisonLength = comparison ? comparison.length : 0;
           </Link> 
           <div className={styles.phone}>
         <svg width="33" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="19.1484" y="0.75" width="3.1" height="22.42" stroke="#A5A5A7" stroke-width="1.5" />
-            <rect x="9.94922" y="8.11035" width="3.1" height="15.06" stroke="#A5A5A7" stroke-width="1.5" />
-            <rect x="0.75" y="13.6299" width="3.1" height="9.54" stroke="#A5A5A7" stroke-width="1.5" />
+            <rect x="19.1484" y="0.75" width="3.1" height="22.42" stroke="#A5A5A7" strokeWidth="1.5" />
+            <rect x="9.94922" y="8.11035" width="3.1" height="15.06" stroke="#A5A5A7" strokeWidth="1.5" />
+            <rect x="0.75" y="13.6299" width="3.1" height="9.54" stroke="#A5A5A7" strokeWidth="1.5" />
           </svg>
           <Link to="/comparison">
           <span className={comparisonLength > 0 ?  styles.counter2 : null}>{comparisonLength > 0 ? comparisonLength : null}</span>
