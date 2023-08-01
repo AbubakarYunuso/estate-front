@@ -36,7 +36,7 @@ const comparisonLength = comparison ? comparison.length : 0;
 
 return (
   <div className={styles.header}>
-    <div className={styles.logo}><img src={favicon} alt="" /></div>
+    <div onClick={()=>navigate("/")} className={styles.logo}><img src={favicon} alt="" /></div>
     <ul className={styles.menu}>
       <li>О нашей компании</li>
       <li>Наши ЖК</li>

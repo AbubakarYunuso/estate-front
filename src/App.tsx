@@ -15,9 +15,6 @@ function App() {
     <>
       <div className="container">
         <Header />
-        <Routes>
-          <Route path="/" element={<Estate />} />
-        </Routes>
       </div>
       <Routes>
         <Route path="/comments" element={<Comments />} />
@@ -26,6 +23,7 @@ function App() {
         <Route path="/cards" element={<Cards />} />
         <Route path="/" element={<BuldingObject />} />
         <Route path="/comparison" element={<Comparison />} />
+        <Route path="/estate" element={<Estate />} />
       </Routes>
     </>
   );
