@@ -27,7 +27,7 @@ const comparisonLength = comparison ? comparison.length : 0;
         <li>О нашей компании</li>
         <li>Наши ЖК</li>
         <li>Местоположение ЖК</li>
-        <Link to="/comments"><li>Отзывы</li></Link>
+        <Link to="/comments">Отзывы</Link>
       </ul>
       <div className={styles.header_right}>
       

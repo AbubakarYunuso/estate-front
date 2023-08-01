@@ -11,6 +11,9 @@ const Cards = () => {
   const user = useSelector((state) => state.auth.user.favorites);
   const estates = useSelector((state) => state.estates.estates);
 
+  const token = useSelector((state) => state.auth.token);
+  console.log(token);
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,9 +23,6 @@ const Cards = () => {
   const handleFavoriteToggle = (estateId) => {
     dispatch(addFavorite(estateId))
   }
-
-  console.log(user);
-  console.log(estates);
 
   const favoriteEstates = estates.filter((estate) => user?.includes(estate._id));
 
@@ -62,8 +62,6 @@ const Cards = () => {
                 </div>
                 <div className={styles.button}>Узнать цену</div>
               </div>
-
-
             )
           })
         }
