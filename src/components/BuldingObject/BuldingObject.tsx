@@ -9,10 +9,11 @@ import moneyIcon from "../../acces/icons/money.png";
 import pasIcon from "../../acces/icons/ras.png";
 import { Placemark, Map, YMaps } from "@pbe/react-yandex-maps";
 import tgIcon from "../../acces/icons/tgIconNeed.png";
+import { useNavigate } from "react-router-dom";
 
 function BuldingObject(): JSX.Element {
   const dispatch = useDispatch<AppDispatch>();
-
+  const navigate = useNavigate();
   const buldingObject = useSelector(
     (state: RootState) => state.buldingObject.state
   );
@@ -56,7 +57,7 @@ function BuldingObject(): JSX.Element {
           <div className={styles.iconContainer}>
             <div className={styles.icon}>
               <img src={pasIcon} alt="" />
-              <article style={{transition: '.3s'}} id="about" ></article>
+              <article style={{ transition: ".3s" }} id="about"></article>
             </div>
             <div className={styles.textIcon}>
               Рассрочка от партнёров до 5 лет с минимальной наценкой
@@ -91,13 +92,17 @@ function BuldingObject(): JSX.Element {
           </div>
         </div>
       </div>
-      <article id="buldingObject" ></article>
+      <article id="buldingObject"></article>
       <div className={styles.buldingObjectText}>НАШИ ЖИЛЫЕ КОМПЛЕКСЫ →</div>
       <div className={styles.fourBlock}>
         <div className={styles.buldingObjectCarts}>
           {buldingObject.map((item) => {
             return (
-              <div key={item._id} className={styles.cartContainer}>
+              <div
+                onClick={() => navigate("/estate")}
+                key={item._id}
+                className={styles.cartContainer}
+              >
                 <img
                   className={styles.cartImage}
                   src={`http://localhost:4000/${item.image[0]}`}
@@ -111,7 +116,7 @@ function BuldingObject(): JSX.Element {
         </div>
       </div>
       <div className={styles.fiveBlock}>
-      <article id="map" ></article>
+        <article id="map"></article>
         <div className={styles.map}>
           <YMaps>
             <Map
